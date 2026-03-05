@@ -1,0 +1,34 @@
+:root {
+  --color1: #f9ded3;
+  --color2: #fdd1b6;
+  --color3: #fab4b6;
+  --color4: #c7b6be;
+  --color5: #89abb4;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+}
+h1 {
+  font-family: sans-serif;
+  color: #292929;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+button {
+  font-family: sans-serif;
+  background-color: #292929;
+  color: #c2c2c2;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;}
