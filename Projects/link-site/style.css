@@ -1,0 +1,70 @@
+body{
+  background-image: linear-gradient(135deg, #7151A6, #D1C7E7);
+  height: 100vh;
+}
+
+#profile-pic{
+  background-image: url("img/morewmejpg.jpg");
+  height: 220px;
+  width: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  
+  transition: 0.5s;
+}
+
+h1{
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  margin: 40px -40px;
+}
+
+.buttonSocial{
+  font-family: "Silkscreen", sans-serif;
+  display: block;
+  border-radius: 50px;
+  width: 220px;
+  height: 40px;
+  background-color: #7151A6;
+  margin: 27px 0;
+  position: relative;
+  transition: 1s;
+  
+  img{
+    position:absolute;
+    height: 24px;
+    left: 40px;
+    top: 9px;
+  }
+
+  p{
+    position:absolute;
+    left: 77px;
+    top: 12px;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+  }
+}
+
+#content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.buttonSocial:hover{
+  background-color: #D1C7E7;
+  color: #7151A6;
+  cursor: pointer;
+  transition: 1s;
+}
+
+#profile-pic:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
