@@ -1,0 +1,128 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: "Silkscreen", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  margin: 10px;
+  padding: 20px;
+  background-color: plum;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+}
+
+.button:hover {
+  background-color: greenyellow;
+}
+
+.pagecontent {
+  width: 80%;
+}
+
+.container {
+  display: flex;
+  border: 2px solid black;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.item {
+  background-color: plum;
+  margin: 10px;
+}
+
+.i1 {
+  background-color: greenyellow;
+  padding: 20px;
+}
+.item:hover {
+  background-color: greenyellow;
+}
+
+.groupSelector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+#options {
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid black;
+}
+
+.content {
+  padding: 20px 80px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 20px 0px;
+  text-decoration: underline greenyellow wavy;
+}
+
+pre {
+  font-family: "Courier New", Courier, monospace;
+  text-transform: lowercase;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  text-transform: lowercase;
+  background-color: black;
+  color: greenyellow;
+}
+
+.code-preview-label {
+  display: block;
+  color: plum;
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-family: "Silkscreen", sans-serif;
+  text-transform: lowercase;
+}
+
+.code-preview {
+  background-color: black;
+  color: greenyellow;
+  border: 2px solid greenyellow;
+  margin: 0 20px;
+  padding: 16px 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  text-transform: lowercase;
+  line-height: 1.8;
+}
+
+#code-preview {
+  margin: 0;
+  white-space: pre;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: static;
+  bottom: 0;
+}

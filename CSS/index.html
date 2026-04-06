@@ -1,62 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estudos de CSS</title>
-</head>
-<body>
-  <h1>Bem-vindo ao CSS!</h1>
-  <button onclick="window.location.href='flexbox.html'">Flexbox</button>
-  <h2>O que é CSS?</h2>
-  <p>O CSS (Cascading Style Sheets) é a linguagem responsável pela aparência visual das páginas web. Se o HTML é o esqueleto, o CSS é a roupa e a maquiagem.</p>
-  <h3>Como funciona</h3>
-  <p>O CSS funciona selecionando elementos HTML e aplicando estilos a eles:</p>
-  <code>p { <br>
-  color: red; <br>
-  font-size: 18px; <br>
-}</code>
-<p>Esse código deixa todos os parágrafos com texto vermelho e tamanho 18px.</p>
-  <h3>Onde colocar o CSS?</h3>
-  <p>O CSS pode ser colocado de três formas:</p>
-  <ul>
-    <li><strong>Inline:</strong> diretamente no elemento HTML usando o atributo "style".</li>
-    <code>&lt;p style="color: red;"&gt;Texto vermelho&lt;/p&gt;</code>
-    <li><strong>Interno:</strong> dentro de uma tag &lt;style&gt; no cabeçalho do documento HTML.</li>
-    <code>&lt;style&gt;<br>
-      p { <br>
-        color: red; <br>
-        font-size: 18px; <br>
-      } <br>
-    &lt;/style&gt;</code>
-    <li><strong>Externo:</strong> em um arquivo .css separado, que é vinculado ao HTML usando a tag &lt;link&gt;.</li>
-    <code>&lt;link rel="stylesheet" href="estilo.css"&gt;</code>
-  </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudos de CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="pagecontent">
+      <h1>Bem-vindo ao CSS!</h1>
+      <nav class="menu">
+        <a class="button" href="flexbox.html">Flexbox</a>
+        <a class="button" href="grid.html">Grid</a>
+      </nav>
 
-<h3>O que você pode estilizar</h3>
-  <ul>
-    <li>Cores e fundos — <code>color, background-color, background-image</code></li>
-    <li>Tipografia — <code>font-family, font-size, font-weight, line-height</code></li>
-    <li>Espaçamento —  <code>margin</code> (espaçamento externo) e <code>padding</code> (espaçamento interno)</li>
-    <li>Tamanho — <code>width, height, max-width</code></li>
-    <li>Layout — <code>display, flexbox, grid</code></li>
-    <li>Bordas e sombras — <code>border, border-radius, box-shadow</code></li>
-    <li>Animações — <code>transition, animation</code></li>
-  </ul>
+      <h2>O que é CSS?</h2>
+      <p>
+        O CSS (Cascading Style Sheets) é a linguagem responsável pela aparência
+        visual das páginas web. Se o HTML é o esqueleto, o CSS é a roupa e a
+        maquiagem.
+      </p>
+      <h3>Como funciona</h3>
+      <p>
+        O CSS funciona selecionando elementos HTML e aplicando estilos a eles:
+      </p>
 
-<h2>A Cascata no CSS</h2>
-<p>Quando dois estilos conflitam, o navegador resolve o impasse seguindo três critérios em ordem:</p>
-<ul>
-  <li>Especificidade — a regra mais "específica" vence. Um ID (#titulo) pesa mais que uma classe (.texto), que pesa mais que um elemento (p). Quanto mais direcionado o seletor, maior sua autoridade.</li>
-  <li>Ordem de aparição — se dois seletores têm o mesmo peso, vence o que aparece por último no código. O CSS lê de cima para baixo, e a última palavra é a que vale.</li>
-  <li>Herança — elementos filhos herdam automaticamente certas propriedades do pai, como color e font-family. Propriedades de espaçamento e borda, porém, não são herdadas.</li>
-</ul>
-<p>Esses três critérios formam a "cascata" — um sistema de prioridades que garante previsibilidade mesmo quando múltiplas regras se aplicam ao mesmo elemento.</p>
+      <div class="code-preview">
+          <span class="code-preview-label">// CSS</span>
+          <pre id="code-preview">
+          p {
+          color: red;
+          font-size: 18px;
+          }</code
+        >
+        </div>
 
-  <hr>
-  <footer>
-    <span>estudo pessoal</span><br>
-    <span>HTML · CSS · JS</span>
-  </footer>
-</body>
+      <p>
+        Esse código deixa todos os parágrafos com texto vermelho e tamanho 18px.
+      </p>
+      <h3>Onde colocar o CSS?</h3>
+      <p>O CSS pode ser colocado de três formas:</p>
+      <ul>
+        <li>
+          <strong>Inline:</strong> diretamente no elemento HTML usando o
+          atributo "style".
+        </li>
+        <code>&lt;p style="color: red;"&gt;Texto vermelho&lt;/p&gt;</code>
+        <li>
+          <strong>Interno:</strong> dentro de uma tag &lt;style&gt; no cabeçalho
+          do documento HTML.
+        </li>
+        <div class="code-preview">
+          <span class="code-preview-label">// HTML</span>
+          <pre id="code-preview">
+          &lt;style&gt;
+            p {
+              color: red;
+              font-size: 18px;
+            }
+          &lt;/style&gt;</pre
+          >
+        </div>
+
+        <li>
+          <strong>Externo:</strong> em um arquivo .css separado, que é vinculado
+          ao HTML usando a tag &lt;link&gt;.
+        </li>
+        <code>&lt;link rel="stylesheet" href="estilo.css"&gt;</code>
+      </ul>
+
+      <h3>O que você pode estilizar</h3>
+      <ul>
+        <li>
+          Cores e fundos —
+          <code>color, background-color, background-image</code>
+        </li>
+        <li>
+          Tipografia —
+          <code>font-family, font-size, font-weight, line-height</code>
+        </li>
+        <li>
+          Espaçamento — <code>margin</code> (espaçamento externo) e
+          <code>padding</code> (espaçamento interno)
+        </li>
+        <li>Tamanho — <code>width, height, max-width</code></li>
+        <li>Layout — <code>display, flexbox, grid</code></li>
+        <li>
+          Bordas e sombras — <code>border, border-radius, box-shadow</code>
+        </li>
+        <li>Animações — <code>transition, animation</code></li>
+      </ul>
+
+      <h2>A Cascata no CSS</h2>
+      <p>
+        Quando dois estilos conflitam, o navegador resolve o impasse seguindo
+        três critérios em ordem:
+      </p>
+      <ul>
+        <li>
+          Especificidade — a regra mais "específica" vence. Um ID (#titulo) pesa
+          mais que uma classe (.texto), que pesa mais que um elemento (p).
+          Quanto mais direcionado o seletor, maior sua autoridade.
+        </li>
+        <li>
+          Ordem de aparição — se dois seletores têm o mesmo peso, vence o que
+          aparece por último no código. O CSS lê de cima para baixo, e a última
+          palavra é a que vale.
+        </li>
+        <li>
+          Herança — elementos filhos herdam automaticamente certas propriedades
+          do pai, como color e font-family. Propriedades de espaçamento e borda,
+          porém, não são herdadas.
+        </li>
+      </ul>
+      <p>
+        Esses três critérios formam a "cascata" — um sistema de prioridades que
+        garante previsibilidade mesmo quando múltiplas regras se aplicam ao
+        mesmo elemento.
+      </p>
+
+      <hr />
+    </div>
+    <footer>
+      <span>estudo pessoal</span><br />
+      <span>HTML · CSS · JS</span>
+    </footer>
+  </body>
 </html>

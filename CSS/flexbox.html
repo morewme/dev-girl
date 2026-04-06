@@ -5,14 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flexbox</title>
   <link  rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Flex Direction</h1>
-  <div class="container">
-    <p class="item">Item 1</p>
-    <p class="item">Item 2</p>
-    <p class="item">Item 3</p>
-    <p class="item">Item 4</p>
+  <div class="pagecontent">
+    <h1>Flexbox!</h1>
+        <nav class="menu">
+        <a class="button" href="index.html">Voltar</a>
+      </nav>
+    <h2>display: flex;</h2>
+    <div class="container">
+      <p class="item i1">Item 1</p>
+      <p class="item">Item 2</p>
+      <p class="item">Item 3</p>
+      <p class="item">Item 4</p>
+    </div>
+
+    <div class="groupSelector">
+      <div class="selectors">
+        <label for="select-direction:">flex-direction:</label>
+        <select id="select-direction" name="options">
+          <option value="row">row; (padrão)</option>
+          <option value="row-reverse">row-reverse;</option>
+          <option value="column">column;</option>
+          <option value="column-reverse">column-reverse;</option>
+        </select>
+      </div>
+
+      <div class="selectors">
+        <label for="select-justify">justify-content:</label>
+        <select id="select-justify" name="options">
+          <option value="flex-start">flex-start; (padrão)</option>
+          <option value="flex-end">flex-end;</option>
+          <option value="center">center;</option>
+          <option value="space-between">space-between;</option>
+          <option value="space-around">space-around;</option>
+          <option value="space-evenly">space-evenly;</option>
+        </select>
+      </div>
+
+      <div class="selectors">
+        <label for="select-align">align-items:</label>
+        <select id="select-align" name="options">
+          <option value="stretch">stretch; (padrão)</option>
+          <option value="flex-start">flex-start;</option>
+          <option value="flex-end">flex-end;</option>
+          <option value="center">center;</option>
+          <option value="baseline">baseline;</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="code-preview">
+      <span class="code-preview-label">// CSS gerado</span>
+      <pre id="code-preview">.container {
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       align-items: stretch;
+      }</pre>
+    </div>
+
+    <div class="content">
+      <p>O <strong>Flexbox</strong> (Flexible Box Layout) é um modelo de layout do CSS criado para distribuir e alinhar elementos dentro de um contêiner de forma dinâmica e eficiente.</p>
+      <p>A ideia central é simples: você tem um contêiner pai (o flex container) e filhos (os flex items). Quando você define display: flex no pai, todos os filhos imediatos passam a se comportar de acordo com as regras do Flexbox.</p>
+      <h3>Existem dois eixos fundamentais que controlam tudo:</h3>
+      <ul>
+        <li><strong>Eixo principal (main axis):</strong> a direção em que os itens são dispostos (horizontal por padrão)</li>
+        <li><strong>Eixo cruzado (cross axis):</strong> perpendicular ao eixo principal</li>
+      </ul>
+      <h3>Propriedades do contêiner (pai):</h3>
+      <ul>
+        <li><strong>flex-direction:</strong> define a direção dos itens no contêiner</li>
+        <li><strong>flex-wrap:</strong> controla se os itens devem quebrar para a próxima linha</li>
+        <li><strong>justify-content:</strong> alinha os itens no eixo principal</li>
+        <li><strong>align-items:</strong> alinha os itens no eixo cruzado</li>
+      </ul>
+
+      <h3>Propriedades dos itens (filhos):</h3>
+      <ul>
+        <li><strong>order:</strong> controla a ordem de exibição dos itens</li>
+        <li><strong>flex-grow:</strong> define a capacidade de um item crescer para preencher o espaço disponível</li>
+        <li><strong>flex-shrink:</strong> define a capacidade de um item encolher quando o espaço é limitado</li>
+        <li><strong>flex-basis:</strong> define o tamanho inicial do item antes de crescer ou encolher</li>
+    </div>
   </div>
+
+  <footer>
+    <span>estudo pessoal</span><br>
+    <span>HTML · CSS · JS</span>
+  </footer>  
 </body>
+<script src="script.js"></script>
 </html>
